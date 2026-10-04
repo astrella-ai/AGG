@@ -1,71 +1,117 @@
 {
-  "name": "source-map-js",
-  "description": "Generates and consumes source maps",
-  "version": "1.2.2",
-  "homepage": "https://github.com/7rulnik/source-map-js",
-  "author": "Valentin 7rulnik Semirulnik <v7rulnik@gmail.com>",
-  "contributors": [
-    "Nick Fitzgerald <nfitzgerald@mozilla.com>",
-    "Tobias Koppers <tobias.koppers@googlemail.com>",
-    "Duncan Beevers <duncan@dweebd.com>",
-    "Stephen Crane <scrane@mozilla.com>",
-    "Ryan Seddon <seddon.ryan@gmail.com>",
-    "Miles Elam <miles.elam@deem.com>",
-    "Mihai Bazon <mihai.bazon@gmail.com>",
-    "Michael Ficarra <github.public.email@michael.ficarra.me>",
-    "Todd Wolfson <todd@twolfson.com>",
-    "Alexander Solovyov <alexander@solovyov.net>",
-    "Felix Gnass <fgnass@gmail.com>",
-    "Conrad Irwin <conrad.irwin@gmail.com>",
-    "usrbincc <usrbincc@yahoo.com>",
-    "David Glasser <glasser@davidglasser.net>",
-    "Chase Douglas <chase@newrelic.com>",
-    "Evan Wallace <evan.exe@gmail.com>",
-    "Heather Arthur <fayearthur@gmail.com>",
-    "Hugh Kennedy <hughskennedy@gmail.com>",
-    "David Glasser <glasser@davidglasser.net>",
-    "Simon Lydell <simon.lydell@gmail.com>",
-    "Jmeas Smith <jellyes2@gmail.com>",
-    "Michael Z Goddard <mzgoddard@gmail.com>",
-    "azu <azu@users.noreply.github.com>",
-    "John Gozde <john@gozde.ca>",
-    "Adam Kirkton <akirkton@truefitinnovation.com>",
-    "Chris Montgomery <christopher.montgomery@dowjones.com>",
-    "J. Ryan Stinnett <jryans@gmail.com>",
-    "Jack Herrington <jherrington@walmartlabs.com>",
-    "Chris Truter <jeffpalentine@gmail.com>",
-    "Daniel Espeset <daniel@danielespeset.com>",
-    "Jamie Wong <jamie.lf.wong@gmail.com>",
-    "Eddy Bruël <ejpbruel@mozilla.com>",
-    "Hawken Rives <hawkrives@gmail.com>",
-    "Gilad Peleg <giladp007@gmail.com>",
-    "djchie <djchie.dev@gmail.com>",
-    "Gary Ye <garysye@gmail.com>",
-    "Nicolas Lalevée <nicolas.lalevee@hibnet.org>"
+  "name": "react-dom",
+  "version": "19.3.0",
+  "description": "React package for working with the DOM.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react/react.git",
+    "directory": "packages/react-dom"
+  },
+  "keywords": [
+    "react"
   ],
-  "repository": "7rulnik/source-map-js",
-  "main": "./source-map.js",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/react/react/issues"
+  },
+  "homepage": "https://react.dev/",
+  "dependencies": {
+    "scheduler": "^0.28.0"
+  },
+  "peerDependencies": {
+    "react": "^19.3.0"
+  },
   "files": [
-    "source-map.js",
-    "source-map.d.ts",
-    "lib/"
+    "LICENSE",
+    "README.md",
+    "client.js",
+    "client.react-server.js",
+    "index.js",
+    "profiling.js",
+    "profiling.react-server.js",
+    "react-dom.react-server.js",
+    "server.browser.js",
+    "server.bun.js",
+    "server.edge.js",
+    "server.js",
+    "server.node.js",
+    "server.react-server.js",
+    "static.browser.js",
+    "static.edge.js",
+    "static.js",
+    "static.node.js",
+    "static.react-server.js",
+    "test-utils.js",
+    "cjs/"
   ],
-  "engines": {
-    "node": ">=0.10.0"
+  "exports": {
+    ".": {
+      "react-server": "./react-dom.react-server.js",
+      "default": "./index.js"
+    },
+    "./client": {
+      "react-server": "./client.react-server.js",
+      "default": "./client.js"
+    },
+    "./server": {
+      "react-server": "./server.react-server.js",
+      "workerd": "./server.edge.js",
+      "bun": "./server.bun.js",
+      "deno": "./server.node.js",
+      "worker": "./server.browser.js",
+      "node": "./server.node.js",
+      "edge-light": "./server.edge.js",
+      "browser": "./server.browser.js",
+      "default": "./server.node.js"
+    },
+    "./server.browser": {
+      "react-server": "./server.react-server.js",
+      "default": "./server.browser.js"
+    },
+    "./server.bun": {
+      "react-server": "./server.react-server.js",
+      "default": "./server.bun.js"
+    },
+    "./server.edge": {
+      "react-server": "./server.react-server.js",
+      "default": "./server.edge.js"
+    },
+    "./server.node": {
+      "react-server": "./server.react-server.js",
+      "default": "./server.node.js"
+    },
+    "./static": {
+      "react-server": "./static.react-server.js",
+      "workerd": "./static.edge.js",
+      "deno": "./static.browser.js",
+      "worker": "./static.browser.js",
+      "node": "./static.node.js",
+      "edge-light": "./static.edge.js",
+      "browser": "./static.browser.js",
+      "default": "./static.node.js"
+    },
+    "./static.browser": {
+      "react-server": "./static.react-server.js",
+      "default": "./static.browser.js"
+    },
+    "./static.edge": {
+      "react-server": "./static.react-server.js",
+      "default": "./static.edge.js"
+    },
+    "./static.node": {
+      "react-server": "./static.react-server.js",
+      "default": "./static.node.js"
+    },
+    "./profiling": {
+      "react-server": "./profiling.react-server.js",
+      "default": "./profiling.js"
+    },
+    "./test-utils": "./test-utils.js",
+    "./package.json": "./package.json"
   },
-  "license": "BSD-3-Clause",
-  "scripts": {
-    "test": "npm run build && node test/run-tests.js",
-    "build": "webpack --color",
-    "toc": "doctoc --title '## Table of Contents' README.md && doctoc --title '## Table of Contents' CONTRIBUTING.md"
-  },
-  "devDependencies": {
-    "clean-publish": "^3.1.0",
-    "doctoc": "^0.15.0",
-    "webpack": "^1.12.0"
-  },
-  "clean-publish": {
-    "cleanDocs": true
-  },
-  "typings": "source-map.d.ts"
+  "browser": {
+    "./server.js": "./server.browser.js",
+    "./static.js": "./static.browser.js"
+  }
 }
