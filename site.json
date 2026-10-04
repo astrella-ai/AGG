@@ -1,0 +1,11 @@
+{
+  "title": "Nexus Organization OS",
+  "description": "Founder-controlled autonomous AI organization operating system.",
+  "language": "en",
+  "robots": {
+    "index": true
+  },
+  "accessibility": {
+    "addBypassLinks": true
+  }
+}
