@@ -1,60 +1,21 @@
-# `react-dom`
+# picocolors
 
-This package serves as the entry point to the DOM and server renderers for React. It is intended to be paired with the generic React package, which is shipped as `react` to npm.
+The tiniest and the fastest library for terminal output formatting with ANSI colors.
 
-## Installation
+```javascript
+import pc from "picocolors"
 
-```sh
-npm install react react-dom
+console.log(
+  pc.green(`How are ${pc.italic(`you`)} doing?`)
+)
 ```
 
-## Usage
+- **No dependencies.**
+- **14 times** smaller and **2 times** faster than chalk.
+- Used by popular tools like PostCSS, SVGO, Stylelint, and Browserslist.
+- Node.js v6+ & browsers support. Support for both CJS and ESM projects.
+- TypeScript type declarations included.
+- [`NO_COLOR`](https://no-color.org/) friendly.
 
-### In the browser
-
-```js
-import { createRoot } from 'react-dom/client';
-
-function App() {
-  return <div>Hello World</div>;
-}
-
-const root = createRoot(document.getElementById('root'));
-root.render(<App />);
-```
-
-### On the server
-
-```js
-import { renderToPipeableStream } from 'react-dom/server';
-
-function App() {
-  return <div>Hello World</div>;
-}
-
-function handleRequest(res) {
-  // ... in your server handler ...
-  const stream = renderToPipeableStream(<App />, {
-    onShellReady() {
-      res.statusCode = 200;
-      res.setHeader('Content-type', 'text/html');
-      stream.pipe(res);
-    },
-    // ...
-  });
-}
-```
-
-## API
-
-### `react-dom`
-
-See https://react.dev/reference/react-dom
-
-### `react-dom/client`
-
-See https://react.dev/reference/react-dom/client
-
-### `react-dom/server`
-
-See https://react.dev/reference/react-dom/server
+## Docs
+Read **[full docs](https://github.com/alexeyraspopov/picocolors#readme)** on GitHub.
